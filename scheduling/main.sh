@@ -3,6 +3,7 @@
 #This the main script that reads from API and stores in HDFS for Footfal Analytics 
 
 #Parameters
+path='please add the path of your activity'
 
 log_file=C:/Users/kalai/Downloads/learnworlds_assignment/logs/fa_log_$(date +%Y_%m_%d).log
 EX1=/C:/Users/kalai/Downloads/learnworlds_assignment/src/Exercise_1.py
