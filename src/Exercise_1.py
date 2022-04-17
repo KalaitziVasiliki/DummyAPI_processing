@@ -5,10 +5,9 @@ from requests.auth import HTTPBasicAuth
 import logging
 import pandas as pd
 from pandas import json_normalize
-#Read configuration file
+#Read configuration file -- Please set the path you are using
 sys.path.insert(1, 'https://github.com/KalaitziVasiliki/DummyAPI_processing/blob/main/config/')
 sys.path.insert(1, '/DummyAPI_processing/blob/main/config/')
-
 import configuration as conf
 
 #Set max retries
