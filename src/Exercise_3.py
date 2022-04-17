@@ -6,9 +6,9 @@ import json
 import datetime as dt,time
 import logging
 import sys
-#Read configuration file
-sys.path.insert(1, 'C:/Users/kalai/Downloads/learnworlds/config')
-
+#Read configuration file -- Please set the path you are using
+sys.path.insert(1, 'https://github.com/KalaitziVasiliki/DummyAPI_processing/blob/main/config/')
+sys.path.insert(1, '/DummyAPI_processing/blob/main/config/')
 import configuration as conf
 
 
