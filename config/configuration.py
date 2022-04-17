@@ -1,7 +1,6 @@
 #EX.1 configurations
 request_timeout=60
 
-
 prefix_path='please add the path of your activity before running the projet, example C:/Users/myname/Desktop/'
 project_path= prefix_path + 'DummyAPI_processing/datasets/'
 filetype='.json'
