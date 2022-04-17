@@ -1,11 +1,9 @@
-
-
 #EX.1 configurations
-
 request_timeout=60
 
 
-project_path='C:/Users/kalai/Downloads/learnworlds_assignment/datasets/'
+prefix_path='please add the path of your activity before running the projet, example C:/Users/myname/Desktop/'
+project_path= prefix_path + 'DummyAPI_processing/datasets/'
 filetype='.json'
 filetype_full='_full.json'
 
@@ -14,14 +12,11 @@ USERS_URL = 'https://dummyapi.io/data/v1/user'
 POSTS_URL = 'https://dummyapi.io/data/v1/post'
 COMMENTS_URL = 'https://dummyapi.io/data/v1/comment'
 
-
-
 #EX.2 configurations
 
-project_path1='C:/Users/kalai/Downloads/learnworlds_assignment/datasets/users_full.json'
-project_path2='C:/Users/kalai/Downloads/learnworlds_assignment/datasets/posts_full.json'
-project_path3='C:/Users/kalai/Downloads/learnworlds_assignment/datasets/comments_full.json'
-
+data_path1= prefix_path + 'DummyAPI_processing/datasets/users_full.json'
+data_path2= prefix_path + 'DummyAPI_processing/datasets/posts_full.json'
+data_path3= prefix_path + 'DummyAPI_processing/datasets/comments_full.json'
 
 ds1_columns = ['id', 'title', 'firstname', 'lastname','picture','gender','email','dateofbirth','phone','registerdate', 'updateddate' , 'street', 'city', 'state', 'country', 'timezone']
 ds2_columns = ['id', 'image', 'likes','link','text', 'publishdate','owner_id','owner_title','owner_firstname','owner_lastname','owner_picture', 'tag1','tag2','tag3']	
