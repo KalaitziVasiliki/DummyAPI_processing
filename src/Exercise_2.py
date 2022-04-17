@@ -8,7 +8,7 @@ import logging
 import sys
 
 #Read configuration file
-sys.path.insert(1, 'C:/Users/kalai/Downloads/learnworlds/config')
+sys.path.insert(1, 'https://github.com/KalaitziVasiliki/DummyAPI_processing/config')
 import configuration as conf
 
 
@@ -21,7 +21,7 @@ def mylog(msg,level='info'):
 
 
 def users_transformation():
-	users_df_fin = pd.read_json(conf.project_path1, lines=True)
+	users_df_fin = pd.read_json(conf.data_path1, lines=True)
 	users_df_loc= pd.json_normalize(users_df_fin['location'])
 	del users_df_fin['location']
 	users_df_fin['street'] = users_df_loc['street']
@@ -37,7 +37,7 @@ def users_transformation():
 
 
 def posts_transformation():
-	posts_df_fin = pd.read_json(conf.project_path2, lines=True)
+	posts_df_fin = pd.read_json(conf.data_path2, lines=True)
 	posts_df_owner= pd.json_normalize(posts_df_fin['owner'])
 	del posts_df_fin['owner']
 	posts_df_fin['owner_id'] = posts_df_owner['id']
@@ -61,7 +61,7 @@ def posts_transformation():
 
 	
 def comments_transformation():
-	comments_df = pd.read_json(conf.project_path3)
+	comments_df = pd.read_json(conf.data_path3)
 	comments_df = pd.json_normalize(comments_df['data'])
 	comments_df_fin =comments_df
 	
@@ -120,7 +120,4 @@ if __name__ == '__main__':
 	mylog('\nProcess ended and lasted %s\n'%(scriptDuration))
 	
 	sys.exit(0)
-
-
-
 
