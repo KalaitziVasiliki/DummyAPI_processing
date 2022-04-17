@@ -1,0 +1,12 @@
+**
+# +---------------- minute (0 - 59)
+# |  +------------- hour (0 - 23)
+# |  |  +---------- day of month (1 - 31)
+# |  |  |  +------- month (1 - 12)
+# |  |  |  |  +---- day of week (0 - 6) (Sunday=0 or 7)
+# |  |  |  |  |
+
+
+# The process is scheduled to run every 2 hours between 12-20. Frequency and run times can change anytime. This is a proposal for scheduling.
+
+00 00,04,08,12,16,20 * * * C:/Users/kalai/Downloads/learnworlds_assignment/scripts/main.sh&>>C:/Users/kalai/Downloads/learnworlds_assignment/logs/fa_log_`date +\%Y\%m\%d`_crontab.log
