@@ -10,6 +10,7 @@ Please fetch the following objects from the source:
 - Users (full)
 - Posts (full)
 - Comments
+
 Try and be mindful of the fact that Users and Posts by default are fetched as “preview” items,
 therefore you’ll have to make sure that all columns are fetched.
 Feel free to use the documentation https://dummyapi.io/docs/models to validate the incoming
