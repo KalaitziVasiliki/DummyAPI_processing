@@ -1,3 +1,4 @@
+#----------------------
 #EX.1 configurations
 request_timeout=60
 
@@ -11,8 +12,8 @@ USERS_URL = 'https://dummyapi.io/data/v1/user'
 POSTS_URL = 'https://dummyapi.io/data/v1/post'
 COMMENTS_URL = 'https://dummyapi.io/data/v1/comment'
 
+#----------------------
 #EX.2 configurations
-
 data_path1= prefix_path + 'DummyAPI_processing/datasets/users_full.json'
 data_path2= prefix_path + 'DummyAPI_processing/datasets/posts_full.json'
 data_path3= prefix_path + 'DummyAPI_processing/datasets/comments_full.json'
@@ -22,20 +23,15 @@ ds2_columns = ['id', 'image', 'likes','link','text', 'publishdate','owner_id','o
 ds3_columns = ['id', 'message', 'post','publishdate', 'owner_id','owner_title','owner_firstname','owner_lastname','owner_picture',]
 
 # Connect to POSTGRESQL database
-
 database="lw_db"
 user='postgres'
 password='sD4dtjkw'
 host='localhost'
 port= '5432'
-
 engine='postgresql://postgres:sD4dtjkw@localhost:5432/lw_db'
 
-
+#----------------------
 #EX.3 configurations
-
-
-
 query1= ''' CREATE TABLE DAILY_USER_REGISTRATION AS (
 										SELECT count(id),TO_DATE(registerdate,'YYYY-MM-DD"T"HH24:MI:SSS"Z"') as registerdate from users 
 										group by TO_DATE(registerdate,'YYYY-MM-DD"T"HH24:MI:SSS"Z"'));'''
